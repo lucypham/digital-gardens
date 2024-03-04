@@ -1,0 +1,180 @@
+@font-face {
+    font-family: Akkurat;
+    src: url(fonts/Akkurat.ttf);
+}
+
+* {
+    padding:0;
+    margin:0;
+}
+body {
+    padding:0;
+    margin:0;
+    background-color: #F6F0E6;
+    font-family: 'Courier New', Courier, monospace;
+    height:100vh;
+}
+
+/* START Text Box*/
+#text-box {
+    border:1px solid #000000;
+    border-radius: 25px;
+    padding:45px;
+    background-color: white;
+    width:400px;
+    height:300px;
+    margin:20px 0 0 20px;
+    position:fixed;
+    overflow: auto;
+    z-index: 300;
+    font-family: Akkurat;
+    font-size: 14px;
+    line-height: 19px;
+}
+#text-box > p {
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 30px;
+    line-height:35px;
+    margin-bottom:20px;
+}
+h2 {
+    font-size: 20px;
+    line-height:25px;
+    font-weight:lighter;
+    margin-bottom:20px;
+}
+h3 {
+    font-size:20px;
+    padding-top:15px;
+    margin-bottom:10px;
+}
+.quote {
+    font-size:20px;
+    font-weight: bold;
+    line-height: 25px;
+}
+/* END Text Box*/
+
+/* START Ascii */
+#background {
+    height: 100vh;
+    width:auto;
+    overflow: scroll;
+    display:flex;
+    flex-direction: column;
+}
+
+/* START Grass */
+.grass {
+    border-top:1px solid #000000;
+    bottom:0;
+    border-width: 100%;
+    left:0;
+    height:100px;
+    z-index: 101;
+    width:10000px;
+    word-wrap: break-word;
+}
+.grass > p {
+    overflow-y: hidden;
+    word-wrap: break-word;
+}
+/* END Grass */
+
+/* All ASCII Buildings*/
+.buildings {
+    display:flex;
+    flex-direction: row;
+    gap:500px;
+    margin-bottom:-100px;
+}
+.ascii-building {
+    align-self: flex-end;
+    z-index:200;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:18px;
+}
+.ascii-building > pre {
+    font-family: 'Courier New', Courier, monospace;
+}
+.ascii-building > pre a {
+    text-decoration: none;
+}
+.ascii-building > pre a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.building-caption {
+    display:none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+.building-caption img {
+    display:block;
+    position:absolute;
+    height:200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ascii-building:hover {
+    display:block;
+}
+
+/* Building 1 */
+.building1 {
+    padding-left:400px;
+}
+
+.building1 a, .building4 a, .building7 a {
+    color:#FF5E30;
+}
+
+/* Building 2 */
+.building2 a, .building5 a, .building8 a {
+    color:#BBB809;
+}
+
+/* Building 3 */
+.building3 a, .building6 a, .building9 a {
+    color:#F3B2CA;
+}
+
+/*
+.annotations {
+    display: none;
+    position:sticky;
+    padding:0 0 150px 500px;
+    background-color: #BBB809;
+    bottom:0px;
+    z-index:300;
+    width:9000px;
+}*/
+
+.annotations {
+    font-size:40px;
+    display: flex;
+}
+.annotations a {
+    color:#FF5E30;
+    text-decoration: none;
+}
+
+.annotations > span {
+    display: none;
+    position: relative;
+    font-family: Akkurat;
+    font-size:15px;
+    margin-top:-60px;
+    max-width:50px;
+    text-align: center;
+}
+
+.annotations a:hover + span{
+    display: block;
+    color:#000000;
+    position: absolute;
+}
