@@ -42,6 +42,22 @@ body {
 #text-box > p {
     margin-bottom: 20px;
 }
+.mobile-textbox {
+    display:none;
+    border:1px solid #000000;
+    border-radius: 25px;
+    padding:45px;
+    background-color: white;
+    width:400px;
+    height:300px;
+    margin:20px 0 0 20px;
+    position:fixed;
+    overflow: auto;
+    z-index: 300;
+    font-family: Akkurat;
+    font-size: 14px;
+    line-height: 19px;
+}
 h1 {
     font-size: 30px;
     line-height:35px;
@@ -80,10 +96,11 @@ h3 {
     bottom:0;
     border-width: 100%;
     left:0;
-    height:100px;
+    height:200px;
     z-index: 101;
     width:10000px;
     word-wrap: break-word;
+    background-color:#efefd2
 }
 .grass > p {
     overflow-y: hidden;
@@ -103,6 +120,7 @@ h3 {
     z-index:200;
     font-family: 'Courier New', Courier, monospace;
     font-size:18px;
+    font-weight: bold;
 }
 .ascii-building > pre {
     font-family: 'Courier New', Courier, monospace;
@@ -137,18 +155,22 @@ h3 {
     padding-left:400px;
 }
 
-.building1 a, .building4 a, .building7 a {
-    color:#FF5E30;
+.color1 a {
+    color:#FF5E30 !important;
 }
 
 /* Building 2 */
-.building2 a, .building5 a, .building8 a {
-    color:#BBB809;
+.color2 a {
+    color:#BBB809 !important;
 }
 
 /* Building 3 */
-.building3 a, .building6 a, .building9 a {
-    color:#F3B2CA;
+.color3 a {
+    color:#F3B2CA !important;
+}
+
+.color1 a:hover, .color2 a:hover, .color3 a:hover {
+    color: #000000 !important;
 }
 
 /*
@@ -182,11 +204,15 @@ h3 {
     text-align: center;
     border:1px solid #000000;
     background-color: #ffffffc4;
+    left: 50%;
+}
+
+.annotations a:hover {
+    color: #000000;
 }
 
 .annotations a:hover + span{
     display: block;
-    color:#000000;
     position: absolute;
     bottom: 100%;
 }
@@ -197,7 +223,26 @@ h3 {
         display:block;
     }
     #text-box {
-        display:none;
+        display:block;
+        height:20px;
+        margin-right:100px;
+        width: 63vw;
+    }
+    .mobile-textbox {
+        display:block;
+        border:1px solid #000000;
+        border-radius: 25px;
+        padding:45px;
+        background-color: white;
+        width:400px;
+        height:300px;
+        margin:20px 0 0 20px;
+        position:fixed;
+        overflow: auto;
+        z-index: 300;
+        font-family: Akkurat;
+        font-size: 14px;
+        line-height: 19px;
     }
     .buildings {
         gap:100px;

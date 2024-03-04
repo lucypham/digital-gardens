@@ -7,4 +7,3 @@ var sync = function(e){
 }
 $divs.on( 'scroll', sync);
 
-/* */
