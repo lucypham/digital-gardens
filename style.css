@@ -14,9 +14,17 @@ body {
     font-family: 'Courier New', Courier, monospace;
     height:100vh;
 }
-
+.logo {
+    display: none;
+    font-family: Akkurat;
+    color: #FF5E30;
+    text-align: center;
+    margin-top:20px;
+    position:sticky;
+}
 /* START Text Box*/
 #text-box {
+    display:block;
     border:1px solid #000000;
     border-radius: 25px;
     padding:45px;
@@ -155,6 +163,7 @@ h3 {
 }*/
 
 .annotations {
+    position: relative;
     font-size:40px;
     display: flex;
 }
@@ -165,16 +174,38 @@ h3 {
 
 .annotations > span {
     display: none;
-    position: relative;
+    position: absolute;
     font-family: Akkurat;
-    font-size:15px;
+    font-size:13px;
     margin-top:-60px;
-    max-width:50px;
+    max-width:200px;
     text-align: center;
+    border:1px solid #000000;
+    background-color: #ffffffc4;
 }
 
 .annotations a:hover + span{
     display: block;
     color:#000000;
     position: absolute;
+    bottom: 100%;
+}
+
+/* MOBILE VERSION */
+@media only screen and (max-width: 435px) {
+    .logo {
+        display:block;
+    }
+    #text-box {
+        display:none;
+    }
+    .buildings {
+        gap:100px;
+    }
+    .ascii-building {
+        font-size:15px;
+    }
+    .annotations span {
+        display:block;
+    }
 }
