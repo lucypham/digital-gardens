@@ -10,7 +10,7 @@
 body {
     padding:0;
     margin:0;
-    background-color: #F6F0E6;
+    background-color: #f7f5f1; /* F6F0E6 */
     font-family: 'Courier New', Courier, monospace;
     height:100vh;
 }
@@ -23,25 +23,103 @@ body {
     position:fixed;
     width:100vw;
 }
+/**/
+#navigation {
+    display:block;
+}
+
+/* Desktop Navigation */
+.nav {
+    font-family: Akkurat;
+    border-top:1px solid #000000;
+    bottom:0px;
+    position:fixed;
+    z-index:600;
+    background-color: #ffffff;
+    width:100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+.nav-button {
+    padding:15px;
+    border-right: 1px solid #000000;
+    list-style: none;
+    cursor: pointer;
+}
+.nav-button a {
+    text-decoration: none;
+    color: #000000;
+}
+.nav-button:hover, .nav-button a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
 /* START Text Box*/
 #text-box {
-    display:block;
-    border:1px solid #000000;
-    border-radius: 25px;
-    padding:45px;
+    border-right:1px solid #000000;
+    border-radius: 0px;
+    padding:45px 45px 100px 45px;
     background-color: white;
-    width:400px;
-    height:300px;
-    margin:20px 0 0 20px;
+    width:500px;
+    height:100vh;
     position:fixed;
     overflow: auto;
     z-index: 300;
     font-family: Akkurat;
     font-size: 14px;
     line-height: 19px;
+    box-sizing: border-box;
+}
+#text-box a, #listofgardens a {
+    color: #FF5E30;
+}
+#text-box a:hover {
+    color: #000000;
 }
 #text-box > p {
     margin-bottom: 20px;
+}
+#listofgardens {
+    border-right:1px solid #000000;
+    border-radius: 0px;
+    background-color: white;
+    width:500px;
+    height:100vh;
+    position:fixed;
+    overflow: auto;
+    z-index: 300;
+    font-family: Akkurat;
+    font-size: 14px;
+    line-height: 19px;
+    box-sizing: border-box;
+}
+#listofgardens a {
+    display: flex;
+    flex-direction: column;
+    border-bottom:1px solid #000000;
+    padding:20px 45px 20px 45px;
+    text-decoration: none;
+    color: #000000;
+}
+#listofgardens a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+#about {
+    border-right:1px solid #000000;
+    border-radius: 0px;
+    padding:45px 45px 100px 45px;
+    background-color: white;
+    width:500px;
+    height:100vh;
+    position:fixed;
+    overflow: auto;
+    z-index: 300;
+    font-family: Akkurat;
+    font-size: 14px;
+    line-height: 19px;
+    box-sizing: border-box;
 }
 .button {
     display:none;
@@ -76,20 +154,41 @@ h3 {
     padding-top:15px;
     margin-bottom:10px;
 }
-.quote {
+.byline {
     font-size:20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000000;
+}
+.quote {
+    font-size:15px;
     font-weight: bold;
     line-height: 25px;
 }
 /* END Text Box*/
 
-/* START Ascii */
 #background {
     height: 100vh;
     width:auto;
     overflow: scroll;
     display:flex;
     flex-direction: column;
+}
+#container {
+    display: none;
+}
+
+.clouds pre {
+    position: fixed;
+    animation-name: clouds;
+    animation-duration: 120s;
+    z-index: 190;
+    animation-iteration-count: infinite;
+}
+@keyframes clouds {
+  0%   {margin: 20px 0 0 -800px;}
+  100% {margin: 10px 0 0 100vw;}
 }
 
 /* START Grass */
@@ -98,9 +197,9 @@ h3 {
     bottom:0;
     border-width: 100%;
     left:0;
-    height:200px;
+    height:400px;
     z-index: 101;
-    width:10000px;
+    width:10500px;
     word-wrap: break-word;
     background-color:#efefd2
 }
@@ -112,10 +211,22 @@ h3 {
 
 /* All ASCII Buildings*/
 .buildings {
+    height:100vh;
     display:flex;
     flex-direction: row;
-    gap:500px;
+    gap:400px;
     margin-bottom:-100px;
+}
+.sign {
+    display:block;
+    padding-left: 550px;
+}
+.mobile-sign {
+    display:none;
+}
+.arrow {
+    font-size:36px;
+    line-height:10px;
 }
 .ascii-building {
     align-self: flex-end;
@@ -154,20 +265,20 @@ h3 {
 
 /* Building 1 */
 .building1 {
-    padding-left:400px;
+    padding-left:0px;
 }
 
-.color1 a {
+.color1, .color1 a {
     color:#FF5E30 !important;
 }
 
 /* Building 2 */
-.color2 a {
+.color2, .color2 a {
     color:#BBB809 !important;
 }
 
 /* Building 3 */
-.color3 a {
+.color3, .color3 a {
     color:#F3B2CA !important;
 }
 
@@ -175,28 +286,19 @@ h3 {
     color: #000000 !important;
 }
 
-/*
-.annotations {
-    display: none;
-    position:sticky;
-    padding:0 0 150px 500px;
-    background-color: #BBB809;
-    bottom:0px;
-    z-index:300;
-    width:9000px;
-}*/
-
-.annotations {
+.annotations, .building-annotations {
     position: relative;
-    font-size:40px;
     display: flex;
 }
-.annotations a {
+.annotations {
+    font-size:40px;
+}
+.annotations a, .building-annotations a {
     color:#FF5E30;
     text-decoration: none;
 }
 
-.annotations > span {
+.annotations > span, .building-annotations > span {
     display: none;
     position: absolute;
     font-family: Akkurat;
@@ -205,7 +307,8 @@ h3 {
     max-width:200px;
     text-align: center;
     border:1px solid #000000;
-    background-color: #ffffffc4;
+    padding:5px;
+    background-color: #ffffffe7;
     left: 50%;
 }
 
@@ -213,7 +316,7 @@ h3 {
     color: #000000;
 }
 
-.annotations a:hover + span{
+.annotations a:hover + span, .building-annotations a:hover + span{
     display: block;
     position: absolute;
     bottom: 100%;
@@ -227,6 +330,12 @@ h3 {
     #text-box {
         display: none;
     }
+    #listofgardens {
+        display:none;
+    }
+    .nav {
+        display:none;
+    }
     #container {
         font-family: Akkurat;
         font-size:17px;
@@ -235,14 +344,11 @@ h3 {
         z-index: 300;
         margin:auto;
         position:relative;
-        top: 30%;
+        margin-bottom:-100px;
+        top: 25%;
         transform: translate(0, -50%);
         padding:20px;
-        display: flex;
-        flex-direction: column;
-    }
-    #container p {
-        align-self: flex-start;
+        height:auto;
     }
     #container a {
         font-family: Akkurat;
@@ -280,7 +386,6 @@ h3 {
         overflow: scroll;
         display:flex;
         flex-direction: column;
-        overflow-y: hidden;
     }
     .building1 {
         padding-left:100px;
@@ -318,5 +423,56 @@ h3 {
     }
     .annotations span {
         display:block;
+    }
+
+    #navigation {
+        position: sticky;
+        overflow: hidden;
+        width:100vw;
+        height:auto;
+        background-color: #B4B9C8;
+        padding:30px 60px 20px 20px;
+        z-index:100;
+        text-align: left;
+    }
+
+    .h1 {
+        float:left;
+        margin-bottom:0px;
+    }
+
+    .exit {
+        position:absolute;
+        right:0;
+        top:25%;
+        margin-right:30px;
+        display:block;
+    }
+
+    .content {
+        display:none;
+    }
+
+    #dropdown-content {
+        display:none;
+    }
+
+    #dropdown-content.showing {
+        display: block;
+    }
+    .clouds pre {
+        display:none;
+    }
+    .sign {
+        display:none;
+        padding-left: 10px;
+    }
+    .mobile-sign {
+        display: block;
+        padding-left: 10px;
+    }
+    .arrow {
+        font-size:30px;
+        line-height:10px;
     }
 }
