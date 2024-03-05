@@ -225,7 +225,28 @@ h3 {
         display:block;
     }
     #text-box {
-        display:none;
+        display: none;
+    }
+    #mobile-textbox {
+        display:block;
+        border:1px solid #000000;
+        border-radius:15px;
+        width:70vw;
+        padding:20px;
+        background-color: white;
+        height:50vh;
+        z-index: 300;
+        font-family: Akkurat;
+        font-size: 14px;
+        line-height: 19px;
+        overflow:auto;
+        margin:auto;
+        position:relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    #mobile-textbox > p {
+        margin-bottom: 20px;
     }
     .mobile-textbox-button {
         display: block;
@@ -248,6 +269,9 @@ h3 {
         width:10000px;
         word-wrap: break-word;
         background-color:#efefd2
+    }
+    .grass, .about {
+        width:100vw;
     }
     .buildings {
         display:flex;
