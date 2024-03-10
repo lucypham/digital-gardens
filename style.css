@@ -25,12 +25,21 @@ h2, .h2-style {
     font-weight:lighter;
     margin-bottom:10px;
 }
+.h2-border {
+    padding-bottom:10px;
+    border-bottom:1px solid #848484;
+}
+.subheading {
+    margin-bottom:30px;
+}
 h3 {
     font-size:20px;
     padding-top:15px;
     margin-bottom:10px;
 }
-
+p {
+    margin-bottom:20px;
+}
 /* Desktop Navigation */
 .nav {
     font-family: Akkurat;
@@ -85,14 +94,11 @@ h3 {
     line-height: 19px;
     box-sizing: border-box;
 }
-#text-box a, #listofgardens a, #about a {
+#text-box a, #mygarden a, #listofgardens a, #about a {
     color: #FF5E30;
 }
 #text-box a:hover {
     color: #000000;
-}
-#text-box > p {
-    margin-bottom: 20px;
 }
 
 /* Article */
@@ -110,7 +116,7 @@ h3 {
 }
 
 /* Content > List of Gardens */
-#listofgardens {
+#mygarden, #listofgardens {
     border-right:1px solid #000000;
     border-radius: 0px;
     background-color: white;
@@ -124,21 +130,27 @@ h3 {
     line-height: 19px;
     box-sizing: border-box;
 }
-#listofgardens div { /* This is for the heading and description */
+#mygarden .links, #listofgardens .links {
+    display: flex;
+    flex-direction: column;
+    padding:0;
+}
+#mygarden div, #listofgardens div { /* This is for the heading and description */
     padding:45px 45px 20px 45px;
     border-bottom:1px solid #000000;
 }
-#listofgardens a {
-    display: flex;
-    flex-direction: column;
+#mygarden .links a, #listofgardens .links a {
     border-bottom:1px solid #000000;
     padding:20px 45px 20px 45px;
     text-decoration: none;
     color: #000000;
 }
-#listofgardens a:hover {
+#mygarden a:hover, #listofgardens a:hover {
     background-color: #000000;
     color: #ffffff;
+}
+.mine {
+    padding-left:10px;
 }
 
 /* Content > About */
@@ -190,7 +202,7 @@ This needs to exist so that buildings and grass are separate */
     bottom:0;
     border-width: 100%;
     left:0;
-    height:400px;
+    height:500px;
     z-index: 101;
     width:10500px;
     word-wrap: break-word;
@@ -220,7 +232,7 @@ This needs to exist so that buildings and grass are separate */
     display:flex;
     flex-direction: row;
     gap:400px;
-    margin-bottom:-100px;
+    margin-bottom:-150px;
 }
 
 /* Customizing ASCII Buildings */
@@ -385,9 +397,36 @@ This needs to exist to override the 400px gap (removes space in the "front")*/
         background-color: white;
     }
 
+    /* Content > My Garden */
+    #mygarden {
+        display: none;
+        border:none;
+        width:100vw;
+        height:100vh;
+        overflow: auto;
+    }
+
     /* Content > List of Gardens */
     #listofgardens {
         display: none;
+        border:none;
+        width:100vw;
+        height:100vh;
+        overflow: auto;
+    }
+    #mygarden div, #listofgardens div { /* This is for the heading and description */
+        padding:90px 16px 20px 16px;
+        border-bottom:1px solid #000000;
+    }
+    #mygarden .links a, #listofgardens .links a {
+        border-bottom:1px solid #000000;
+        padding:20px 16px 20px 16px;
+        text-decoration: none;
+        color: #000000;
+    }
+    #mygarden a:hover, #listofgardens a:hover {
+        background-color: #000000;
+        color: #ffffff;
     }
 
     /* Content > About */
@@ -424,7 +463,7 @@ This needs to exist to override the 400px gap (removes space in the "front")*/
         left:0;
         height:300px;
         z-index: 101;
-        width:10000px;
+        width:5000px;
         word-wrap: break-word;
         background-color:#efefd2
     }

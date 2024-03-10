@@ -10,6 +10,7 @@ $divs.on( 'scroll', sync);
 /* For the Navigation! */
 function article() {
     var article = document.getElementById("article");
+    var mygarden = document.getElementById("mygarden");
     var listofgardens = document.getElementById("listofgardens");
     var about = document.getElementById("about");
     var textbox = document.getElementById("text-box");
@@ -18,12 +19,14 @@ function article() {
     if (article.style.display === "none") {
         article.style.display = "block";
         textbox.style.display = "block";
+        mygarden.style.display = "none";
         listofgardens.style.display = "none";
         about.style.display = "none";
         mobilemenulinks.style.display = "none";
     } else {
         article.style.display = "block";
         textbox.style.display = "none";
+        mygarden.style.display = "none";
         listofgardens.style.display = "none";
         about.style.display = "none";
         mobilemenulinks.style.display = "none";
@@ -32,6 +35,7 @@ function article() {
 
 function mobilearticle() {
     var article = document.getElementById("article");
+    var mygarden = document.getElementById("mygarden");
     var listofgardens = document.getElementById("listofgardens");
     var about = document.getElementById("about");
     var textbox = document.getElementById("text-box");
@@ -40,12 +44,14 @@ function mobilearticle() {
     if (article.style.display === "none") {
         article.style.display = "block";
         textbox.style.display = "block";
+        mygarden.style.display = "none";
         listofgardens.style.display = "none";
         about.style.display = "none";
         mobilemenulinks.style.display = "none";
     } else {
         article.style.display = "none";
         textbox.style.display = "none";
+        mygarden.style.display = "none";
         listofgardens.style.display = "none";
         about.style.display = "none";
         mobilemenulinks.style.display = "none";
@@ -54,6 +60,7 @@ function mobilearticle() {
 
 function listofgardens() {
     var article = document.getElementById("article");
+    var mygarden = document.getElementById("mygarden");
     var listofgardens = document.getElementById("listofgardens");
     var about = document.getElementById("about");
     var textbox = document.getElementById("text-box");
@@ -63,12 +70,39 @@ function listofgardens() {
         listofgardens.style.display = "block";
         textbox.style.display = "block";
         article.style.display = "none";
+        mygarden.style.display = "none";
         about.style.display = "none";
         mobilemenulinks.style.display = "none";
     } else {
         listofgardens.style.display = "none";
         textbox.style.display = "none";
         article.style.display = "block";
+        mygarden.style.display = "none";
+        about.style.display = "none";
+        mobilemenulinks.style.display = "none";
+    }
+}
+
+function mygarden() {
+    var article = document.getElementById("article");
+    var mygarden = document.getElementById("mygarden");
+    var listofgardens = document.getElementById("listofgardens");
+    var about = document.getElementById("about");
+    var textbox = document.getElementById("text-box");
+    var mobilemenulinks = document.getElementById("mobile-menu-links");
+
+    if (mygarden.style.display === "none") {
+        mygarden.style.display = "block";
+        textbox.style.display = "block";
+        article.style.display = "none";
+        listofgardens.style.display = "none";
+        about.style.display = "none";
+        mobilemenulinks.style.display = "none";
+    } else {
+        mygarden.style.display = "none";
+        textbox.style.display = "none";
+        article.style.display = "block";
+        listofgardens.style.display = "none";
         about.style.display = "none";
         mobilemenulinks.style.display = "none";
     }
@@ -76,6 +110,7 @@ function listofgardens() {
 
 function about() {
     var article = document.getElementById("article");
+    var mygarden = document.getElementById("mygarden");
     var listofgardens = document.getElementById("listofgardens");
     var about = document.getElementById("about");
     var textbox = document.getElementById("text-box");
@@ -85,12 +120,14 @@ function about() {
         about.style.display = "block";
         textbox.style.display = "block";
         article.style.display = "none";
+        mygarden.style.display = "none";
         listofgardens.style.display = "none";
         mobilemenulinks.style.display = "none";
     } else {
         listofgardens.style.display = "none";
         textbox.style.display = "none";
         article.style.display = "none";
+        mygarden.style.display = "none";
         about.style.display = "none";
         mobilemenulinks.style.display = "none";
     }
@@ -108,3 +145,31 @@ function openMenu() {
       article.style.display = "none";
     }
   }
+
+/* Music */
+function playSounds() {
+    var audio = document.getElementById("audio");
+    var playButton = document.getElementById("playSounds");
+    var pauseButton = document.getElementById("pauseSounds");
+    audio.play();
+    if (playButton.style.display === "block") {
+        playButton.style.display = "none";
+        pauseButton.style.display = "block";
+    } else {
+        playButton.style.display = "block";
+        pauseButton.style.display = "none";
+    }
+}
+function pauseSounds() {
+    var audio = document.getElementById("audio");
+    var playButton = document.getElementById("playSounds");
+    var pauseButton = document.getElementById("pauseSounds");
+    audio.pause();
+    if (pauseButton.style.display === "block") {
+        playButton.style.display = "block";
+        pauseButton.style.display = "none";
+    } else {
+        playButton.style.display = "none";
+        pauseButton.style.display = "block";
+    }
+}
