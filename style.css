@@ -129,6 +129,7 @@ p {
     font-size: 14px;
     line-height: 19px;
     box-sizing: border-box;
+    padding-bottom: 50px;
 }
 #mygarden .links, #listofgardens .links {
     display: flex;
