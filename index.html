@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Gardens</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-<h1 class="logo">Digital Gardens</h1>
+<div id="mobile-menu">
+    <a href="index.html" class="logo">Digital Gardens</a>
+    <div id="mobile-menu-links">
+        <div onclick="mobilearticle()"><a href="#article" >What are digital gardens?</a></div>
+        <div onclick="listofgardens()"><a href="#listofgardens">List of Gardens</a></div>
+        <div onclick="about()"><a href="#about">About</a></div>
+    </div>
+    <a href="javascript:void(0);" class="menu-icon" onclick="openMenu()">
+        <span class="material-symbols-outlined">menu</span>
+    </a>
+</div>
 <div class="clouds">
     <pre>
          (`  ).                   _                          ( `   )_
@@ -22,45 +33,60 @@
              (_  )                     ` __.:'                                                                         (_  )
     </pre>
 </div>
-        <div id="text-box" style="display:block;">
-            <h1>Digital gardens let you cultivate your own little bit of the internet</h1>
-            <h2>A growing number of people are creating individualized, creative sites that eschew the one-size-fits-all look and feel of social media</h2>
-            <p class="byline">By Tanya Basu</p>
-            <p class="quote">Sara Garner had a nagging feeling something wasn’t quite right.</p>
-            <p>A software engineer, she was revamping her personal site, but it just didn’t feel like her. Sure, it had the requisite links to her social media and her professional work, but it didn’t really reflect her personality. So she created a page focused on museums, which she is obsessed with. It’s still under construction, but she envisions a page that includes thoughts on her favorite museums, describes the emotions they evoked, and invites others to share their favorite museums and what they’ve learned.</p>
-            <p class="quote">“I’m going for a feeling of wonderment, a connection across time,” she says.</p>
-            <p>Welcome to the world of “digital gardens.” These creative reimaginings of blogs have quietly taken nerdier corners of the internet by storm. A growing movement of people are tooling with back-end code to create sites that are more collage-like and artsy, in the vein of Myspace and Tumblr—less predictable and formatted than Facebook and Twitter. Digital gardens explore a wide variety of topics and are frequently adjusted and changed to show growth and learning, particularly among people with niche interests. Through them, people are creating an internet that is less about connections and feedback, and more about quiet spaces they can call their own.</p>
-            <h3>"Everyone does their own weird thing"</h3>
-            <p>The movement might be gaining steam now, but its roots date back to 1998, when Mark Bernstein introduced the idea of the “<a href="http://www.eastgate.com/garden/Enter.html" target="_blank">hypertext garden</a>,” arguing for spaces on the internet that let a person wade into the unknown. “Gardens … lie between farmland and wilderness,” he <a href="http://www.eastgate.com/garden/Gardens.html" target="_blank">wrote</a>. “The garden is farmland that delights the senses, designed for delight rather than commodity.” (His <a href="https://www.markbernstein.org/" target="_blank">digital garden</a> includes a recent review of a Bay Area carbonara dish and reflections on his favorite essays.)</p>
-            <p>The new wave of digital gardens discuss books and movies, with introspective journal entries; <a href="https://aaronzlewis.com/starterpack/" target="_blank">others offer thoughts on philosophy and politics</a>. Some are works of art in themselves, visual masterpieces that invite the viewer to explore; others are simpler and more utilitarian, using Google Docs or Wordpress templates to share <a href="https://docs.google.com/document/d/16GRHrEqy1p_ZrmLWIn0eUW4ELcEzol619pcZjRpCefM/edit" target="_blank">intensely personal lists</a>. Avid readers in particular have embraced the concept, sharing <a href="https://amandapinsker.com/reading" target="_blank">creative</a>, <a href="https://highlights.melanie-richards.com/" target="_blank">beautiful</a> <a href="https://highlights.sawyerh.com/" target="_blank">digital</a> bookshelves that illustrate their reading journey.</p>
-            <p>Beneath the umbrella term, however, digital gardens don’t follow rules. They’re not blogs, short for “weblogs,” a term that suggests a time-stamped record of thought. They’re not a social-media platform—connections are made, but often it’s through linking to other digital gardens, or gathering in forums like <a href="https://www.reddit.com/r/DigitalGardens/" target="_blank">Reddit</a> and <a href="https://nesslabs.com/digital-gardeners" target="_blank">Telegram</a> to nerd out over code.</p>
-            <p>Tom Critchlow, a consultant who has been cultivating <a href="https://tomcritchlow.com/wiki/" target="_blank">his digital garden</a> for years, spells out the main difference between old-school blogging and digital gardening. “With blogging, you’re talking to a large audience,” he says. “With digital gardening, you’re talking to yourself. You focus on what you want to cultivate over time.”</p>
-            <p>“With digital gardening, you’re talking to yourself. You focus on what you want to cultivate over time.”</p>
-            <p>What they have in common is that they can be edited at any time to reflect evolution and change. The idea is similar to editing a Wikipedia entry, though digital gardens are not meant to be the ultimate word on a topic. As a slower, clunkier way to explore the internet, they revel in not being <em>the</em> definitive source, just <em>a</em> source, says Mike Caulfield, a digital literacy expert at Washington State University.</p>
-            <p>In fact, the whole point of digital gardens is that they can grow and change, and that various pages on the same topic can coexist. “It’s less about iterative learning and more about public learning,” says Maggie Appleton, a designer. Appleton’s digital garden, for example, includes thoughts on plant-based meat, <a href="https://maggieappleton.com/bookshelf/" target="_blank">book reviews</a>, and digressions on Javascript and magical capitalism. It is “an open collection of notes, resources, sketches, and explorations I’m currently cultivating,” <a href="https://maggieappleton.com/garden" target="_blank">its introduction</a> declares. “Some notes are Seedlings, some are budding, and some are fully grown Evergreen[s].”</p>
-            <p>Caulfield, who has researched misinformation and disinformation, wrote a blog post in 2015 on the “<a href="https://hapgood.us/2015/10/17/the-garden-and-the-stream-a-technopastoral/" target="_blank">technopastoral</a>,” in which he described the federated wiki structure promoted by computer programmer Ward Cunningham, who thought the internet should support a “<a href="http://thegovlab.org/a-modern-wiki-for-a-modern-internet-the-smallest-federated-wiki-on-the-govlabs-demos-for-democracy/" target="_blank">chorus of voices”</a> rather than the few rewarded on social media today.</p>
-            <p>“The stream has dominated our lives since the mid-2000s,” Caulfield says. But it means people are either posting content or consuming it. And, Caulfield says, the internet as it stands rewards shock value and dumbing things down. “By engaging in digital gardening, you are constantly finding new connections, more depth and nuance,” he says. “What you write about is not a fossilized bit of commentary for a blog post. When you learn more, you add to it. It’s less about shock and rage; it’s more connective.” In an age of doom-scrolling and Zoom fatigue, some digital-garden enthusiasts say the internet they live in is, as Caulfield puts it, “optimistically hopeful.”</p>
-            <p>While many people are searching for more intimate communities on the internet, not everyone can spin up a digital garden: you need to be able to do at least some rudimentary coding. Making a page from scratch affords more creative freedom than social-media and web-hosting sites that let you drag and drop elements onto your page, but it can be daunting and time-consuming.</p>
-            <p>Chris Biscardi is trying to get rid of that barrier to entry with a text editor for digital gardens that’s still in its alpha stage. Called Toast, it’s “something you might experience with Wordpress,” he says.</p>
-            <p>Ultimately, whether digital gardens will be an escapist remnant of 2020’s hellscape or wither in the face of easier social media remains to be seen. “I’m interested in seeing how it plays out,” Appleton says.</p>
-            <p>“For some people it’s a reaction to social media, and for others it’s a trend,” Critchlow says. “Whether or not it will hit critical mass … that’s to be seen.”</p>
-        </div>
-        <div id="listofgardens" style="display:none;">
-            <a href="https://maggieappleton.com/garden">Maggie Appleton's Garden</a>
-            <a href="https://digitalgarden.hypha.coop/statement-of-intent">Hypha's Digital Garden</a>
-            <a href="https://garden.bradwoods.io/">Brad Woods Digital Garden</a>
-            <a href="https://nchrs.xyz/"><i>Anchors</i></a>
-            <a href="https://moseshng.com/Obsidian+Publish/Moses's+Digital+Garden">Moses Second Brain</a>
-            <a href=""><i>The Index</i> by @jvnixon</a>
-            <a href="https://aaronzlewis.com/starterpack/" target="_blank">Aaron Z Lewis' Starterpack (Books)</a>
-            <a href="https://amandapinsker.com/" target="_blank"><i>Books I've read and where I read them*</i> by Amanda Pinske</a>
-            <a href="https://highlights.melanie-richards.com/" target="_blank"><i>Highlights</i> (of books) by Melanie Richards</a>
-            <a href="https://highlights.sawyerh.com/" target_="blank"><i>Highlights</i> (of books) by Sawyer Hollenshead</a>
-            <a href="https://tomcritchlow.com/wiki/" target="_blank">Tom Critchlow's "wikifolder"</a>
-        </div>
-        <div id="about" style="display:none;">
-            <div style="border-bottom:1px solid #848484;">
-                <h2>Colophon</h2>
+        <div id="text-box">
+            <div id="article" style="display:block;"></div>
+                <h1>Digital gardens let you cultivate your own little bit of the internet</h1>
+                <h2>A growing number of people are creating individualized, creative sites that eschew the one-size-fits-all look and feel of social media</h2>
+                <p class="byline">By Tanya Basu</p>
+                <p class="quote">Sara Garner had a nagging feeling something wasn’t quite right.</p>
+                <p>A software engineer, she was revamping her personal site, but it just didn’t feel like her. Sure, it had the requisite links to her social media and her professional work, but it didn’t really reflect her personality. So she created a page focused on museums, which she is obsessed with. It’s still under construction, but she envisions a page that includes thoughts on her favorite museums, describes the emotions they evoked, and invites others to share their favorite museums and what they’ve learned.</p>
+                <p class="quote">“I’m going for a feeling of wonderment, a connection across time,” she says.</p>
+                <p>Welcome to the world of “digital gardens.” These creative reimaginings of blogs have quietly taken nerdier corners of the internet by storm. A growing movement of people are tooling with back-end code to create sites that are more collage-like and artsy, in the vein of Myspace and Tumblr—less predictable and formatted than Facebook and Twitter. Digital gardens explore a wide variety of topics and are frequently adjusted and changed to show growth and learning, particularly among people with niche interests. Through them, people are creating an internet that is less about connections and feedback, and more about quiet spaces they can call their own.</p>
+                <h3>"Everyone does their own weird thing"</h3>
+                <p>The movement might be gaining steam now, but its roots date back to 1998, when Mark Bernstein introduced the idea of the “<a href="http://www.eastgate.com/garden/Enter.html" target="_blank">hypertext garden</a>,” arguing for spaces on the internet that let a person wade into the unknown. “Gardens … lie between farmland and wilderness,” he <a href="http://www.eastgate.com/garden/Gardens.html" target="_blank">wrote</a>. “The garden is farmland that delights the senses, designed for delight rather than commodity.” (His <a href="https://www.markbernstein.org/" target="_blank">digital garden</a> includes a recent review of a Bay Area carbonara dish and reflections on his favorite essays.)</p>
+                <p>The new wave of digital gardens discuss books and movies, with introspective journal entries; <a href="https://aaronzlewis.com/starterpack/" target="_blank">others offer thoughts on philosophy and politics</a>. Some are works of art in themselves, visual masterpieces that invite the viewer to explore; others are simpler and more utilitarian, using Google Docs or Wordpress templates to share <a href="https://docs.google.com/document/d/16GRHrEqy1p_ZrmLWIn0eUW4ELcEzol619pcZjRpCefM/edit" target="_blank">intensely personal lists</a>. Avid readers in particular have embraced the concept, sharing <a href="https://amandapinsker.com/reading" target="_blank">creative</a>, <a href="https://highlights.melanie-richards.com/" target="_blank">beautiful</a> <a href="https://highlights.sawyerh.com/" target="_blank">digital</a> bookshelves that illustrate their reading journey.</p>
+                <p>Beneath the umbrella term, however, digital gardens don’t follow rules. They’re not blogs, short for “weblogs,” a term that suggests a time-stamped record of thought. They’re not a social-media platform—connections are made, but often it’s through linking to other digital gardens, or gathering in forums like <a href="https://www.reddit.com/r/DigitalGardens/" target="_blank">Reddit</a> and <a href="https://nesslabs.com/digital-gardeners" target="_blank">Telegram</a> to nerd out over code.</p>
+                <p>Tom Critchlow, a consultant who has been cultivating <a href="https://tomcritchlow.com/wiki/" target="_blank">his digital garden</a> for years, spells out the main difference between old-school blogging and digital gardening. “With blogging, you’re talking to a large audience,” he says. “With digital gardening, you’re talking to yourself. You focus on what you want to cultivate over time.”</p>
+                <p>“With digital gardening, you’re talking to yourself. You focus on what you want to cultivate over time.”</p>
+                <p>What they have in common is that they can be edited at any time to reflect evolution and change. The idea is similar to editing a Wikipedia entry, though digital gardens are not meant to be the ultimate word on a topic. As a slower, clunkier way to explore the internet, they revel in not being <em>the</em> definitive source, just <em>a</em> source, says Mike Caulfield, a digital literacy expert at Washington State University.</p>
+                <p>In fact, the whole point of digital gardens is that they can grow and change, and that various pages on the same topic can coexist. “It’s less about iterative learning and more about public learning,” says Maggie Appleton, a designer. Appleton’s digital garden, for example, includes thoughts on plant-based meat, <a href="https://maggieappleton.com/bookshelf/" target="_blank">book reviews</a>, and digressions on Javascript and magical capitalism. It is “an open collection of notes, resources, sketches, and explorations I’m currently cultivating,” <a href="https://maggieappleton.com/garden" target="_blank">its introduction</a> declares. “Some notes are Seedlings, some are budding, and some are fully grown Evergreen[s].”</p>
+                <p>Caulfield, who has researched misinformation and disinformation, wrote a blog post in 2015 on the “<a href="https://hapgood.us/2015/10/17/the-garden-and-the-stream-a-technopastoral/" target="_blank">technopastoral</a>,” in which he described the federated wiki structure promoted by computer programmer Ward Cunningham, who thought the internet should support a “<a href="http://thegovlab.org/a-modern-wiki-for-a-modern-internet-the-smallest-federated-wiki-on-the-govlabs-demos-for-democracy/" target="_blank">chorus of voices”</a> rather than the few rewarded on social media today.</p>
+                <p>“The stream has dominated our lives since the mid-2000s,” Caulfield says. But it means people are either posting content or consuming it. And, Caulfield says, the internet as it stands rewards shock value and dumbing things down. “By engaging in digital gardening, you are constantly finding new connections, more depth and nuance,” he says. “What you write about is not a fossilized bit of commentary for a blog post. When you learn more, you add to it. It’s less about shock and rage; it’s more connective.” In an age of doom-scrolling and Zoom fatigue, some digital-garden enthusiasts say the internet they live in is, as Caulfield puts it, “optimistically hopeful.”</p>
+                <p>While many people are searching for more intimate communities on the internet, not everyone can spin up a digital garden: you need to be able to do at least some rudimentary coding. Making a page from scratch affords more creative freedom than social-media and web-hosting sites that let you drag and drop elements onto your page, but it can be daunting and time-consuming.</p>
+                <p>Chris Biscardi is trying to get rid of that barrier to entry with a text editor for digital gardens that’s still in its alpha stage. Called Toast, it’s “something you might experience with Wordpress,” he says.</p>
+                <p>Ultimately, whether digital gardens will be an escapist remnant of 2020’s hellscape or wither in the face of easier social media remains to be seen. “I’m interested in seeing how it plays out,” Appleton says.</p>
+                <p>“For some people it’s a reaction to social media, and for others it’s a trend,” Critchlow says. “Whether or not it will hit critical mass … that’s to be seen.”</p>
+            </div>
+            <div id="listofgardens" style="display:none;">
+                <div>
+                    <h1>List of Gardens 🌱</h1>
+                    <p class="h2-style">Explore other gardens around the web.</p>
+                </div>
+                <a href="https://maggieappleton.com/garden">Maggie Appleton's Garden</a>
+                <a href="https://digitalgarden.hypha.coop/statement-of-intent">Hypha's Digital Garden</a>
+                <a href="https://garden.bradwoods.io/">Brad Woods Digital Garden</a>
+                <a href="https://nchrs.xyz/"><i>Anchors</i></a>
+                <a href="https://moseshng.com/Obsidian+Publish/Moses's+Digital+Garden">Moses Second Brain</a>
+                <a href=""><i>The Index</i> by @jvnixon</a>
+                <a href="https://aaronzlewis.com/starterpack/" target="_blank">Aaron Z Lewis' Starterpack (Books)</a>
+                <a href="https://amandapinsker.com/" target="_blank"><i>Books I've read and where I read them*</i> by Amanda Pinske</a>
+                <a href="https://highlights.melanie-richards.com/" target="_blank"><i>Highlights</i> (of books) by Melanie Richards</a>
+                <a href="https://highlights.sawyerh.com/" target_="blank"><i>Highlights</i> (of books) by Sawyer Hollenshead</a>
+                <a href="https://tomcritchlow.com/wiki/" target="_blank">Tom Critchlow's "wikifolder"</a>
+            </div>
+            <div id="about" style="display:none;">
+                <div>
+                    <div style="padding-bottom:20px;">
+                    <h1>About</h1>
+                        <p>I was inspired by the MIT Technology Review article, Maggie Appleton's write-up about digital gardens, and Annika Hansteen-Izora's story to create my own <i>Digital Garden</i>. I was also influenced by my earlier explorations around the Internet and websites (documented in <a href="https://lucypham.github.io/worldwideweb" target="_blank">this spreadsheet</a>).</p>
+                    </div>
+                    <h2 style="padding-bottom:10px;border-bottom:1px solid #848484;">Colophon</h2>
+                    <ul>
+                        <li>Designed by Lucy Nguyen Pham.</li>
+                        <li>Typeset in Akkurat.</li>
+                        <li>Originally coded and designed for <i>Web as Medium</i>, taught by Minkyoung Kim in Spring 2024 at the Rhode Island School of Design.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     <div class="nav">
@@ -68,46 +94,25 @@
         <div class="nav-button" onclick="listofgardens()">List of Gardens</div>
         <div class="nav-button" onclick="about()">About</div>
     </div>
- <div id="background">
-    <div id="container">
-        <p>Digital Gardens are like personal wikis or collection of ideas. that reflect your personal interests. Rather than being designed and maintained for a specific audience, digital gardens are meant to serve the creator.</p>
-        <div class="button">What are digital gardens?</div>
-    </div>
+ <div id="digital-garden">
     <div class="buildings">
         <div class="ascii-building sign">
             <pre>
-          ╔═════════════════════════╗
-          ║     Scroll to Visit     ║
-          ║  Lucy's Digital Garden  ║
-          ║           <span class="arrow">→</span>            ║
-          ╚═════════════════════════╝
-                      |
-                      |
-                      |
-                      |
-                      |
-                 ,’   |  . 
+        ╔═════════════════════════╗
+        ║     Scroll to Visit     ║
+        ║  Lucy's Digital Garden  ║
+        ║           <span class="arrow">→</span>            ║
+        ╚═════════════════════════╝
+                    |
+                    |
+                    |
+                    |
+                    |
+                 ,’ |  . 
     
                  
             </pre>
         </div>
-    <div class="ascii-building mobile-sign">
-        <pre>
-      ╔═════════════════════════╗
-      ║  Scroll Right to Visit  ║
-      ║  Lucy's Digital Garden  ║
-      ║           <span class="arrow">→</span>            ║
-      ╚═════════════════════════╝
-                  |
-                  |
-                  |
-                  |
-                  |
-             ,’   |  . 
-
-             
-        </pre>
-    </div>
     <div class="ascii-building building1">
         <div class="building-annotations"><a class="color1" href="http://vietgd.com/" target="_blank"><pre>
 ________|-----|_|---------------|_|-----|_________
@@ -122,7 +127,7 @@ I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
                   /=============\
                      /       \       
         </pre></a><span><i>Vietnamese Graphic Design:<br>A Casual Archive</i></span></div>
-        <div class="annotations"><a class="color3" href="https://docs.google.com/spreadsheets/u/1/d/1lyvVIqdGW78vftPu3rBUUqHfiFPltYntCLPUbkWxYew/htmlview#">✿</a><span>Elizabeth Goodspeed's <i>Casual Archivist</i> Spreadsheet</span></div>
+        <div style="margin-left:100px;margin-top:20px;" class="annotations"><a class="color3" href="https://docs.google.com/spreadsheets/u/1/d/1lyvVIqdGW78vftPu3rBUUqHfiFPltYntCLPUbkWxYew/htmlview#">✿</a><span>Elizabeth Goodspeed's <i>Casual Archivist</i> Spreadsheet</span></div>
     </div>
 
     <!--School / Online Learning Repository-->
@@ -148,8 +153,8 @@ I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
    |%%%%_%%%%___________|_|_|___%%%%%________%%%%%
      `|   `|’                     |’          `|'
     </pre></a><span><i>Online Learning Repository</i></span></div>
-     <div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="color1" href="https://docs.google.com/spreadsheets/u/1/d/1lyvVIqdGW78vftPu3rBUUqHfiFPltYntCLPUbkWxYew/htmlview#">✿</a><span><i>On Gathering</i> with Mindy Seu</span></div>
+     <div class="annotations"><br>
+        <a class="color1" style="margin-left:200px;" href="https://docs.google.com/spreadsheets/u/1/d/1lyvVIqdGW78vftPu3rBUUqHfiFPltYntCLPUbkWxYew/htmlview#">✿</a><span style="margin-left:100px;"><i>On Gathering</i> with Mindy Seu</span></div>
     </div>
 
     <!--Fairchild Restaurant / Noodles-->
@@ -175,7 +180,7 @@ I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
             </pre></a><span>Rating All the Noodles I Ate<br>in the UK</span></div>
 
             <!--Flower Annotation-->
-             <div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="color2" href="https://www.are.na/block/20684314">✿</a><span><i>I'm like a pdf but a girl</i> by Ester Freider</span></div>
+             <div class="annotations" style="margin-left:100px;"><a class="color2" href="https://www.are.na/block/20684314">✿</a><span><i>I'm like a pdf but a girl</i> by Ester Freider</span></div>
     </div>
     <!--Internet Cafe / World Wide Web Spreadsheet-->
     <div class="ascii-building">
@@ -194,7 +199,7 @@ I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
  ----------------_________------- 
         </pre></a><span>World Wide Web Spreadsheet</span></div>
 
-        <div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;<a class="color3" href="https://www.deemjournal.com/stories/digital-gardens">✿</a><span><i>On Digital Gardens: Tending to Our Collective Multiplicity</i> by Annika Hansteen-Izora</span></div>
+        <div class="annotations" style="margin-left:100px;"><a class="color3" href="https://www.deemjournal.com/stories/digital-gardens">✿</a><span><i>On Digital Gardens: Tending to Our Collective Multiplicity</i> by Annika Hansteen-Izora</span></div>
     </div>
 
     <!--Garden Cafe / Reddit-->
@@ -214,10 +219,8 @@ I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
 |==  == == ==||_____||==  == == ==|
 """"""""""""/_________\"""""""""" "
   ""     "            """  " """
-
     </pre></a><span>r/DigitalGardens on Reddit</span></div>
-
-  <div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;<a class="color1" href="https://escapethealgorithm.substack.com/p/the-doc-web">✿</a><span><i>The Doc Web</i>by Elan Ullendorff</span></div>
+  <div style="margin-left:50px;" class="annotations"><a class="color1" href="https://escapethealgorithm.substack.com/p/the-doc-web">✿</a><span><i>The Doc Web</i> by Elan Ullendorff</span></div>
     </div>
 
     <!--Flowers / None-->
@@ -237,9 +240,9 @@ I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
   |▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓|
   |▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓|
   |▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓|
-    </pre><span></span></div>
+    </pre></div>
 
-    <div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;<a class="color2" href="https://maggieappleton.com/garden-history">✿</a><span><i>A Brief History & Ethos of the Digital Garden</i> by Maggie Appleton</span></div>
+    <div style="margin-left:100px;" class="annotations"><a class="color2" href="https://maggieappleton.com/garden-history">✿</a><span><i>A Brief History & Ethos of the Digital Garden</i> by Maggie Appleton</span></div>
     </div>
 
         <!--House / None-->
@@ -271,14 +274,14 @@ I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
  ||   %@&  =  || | || | ||     &@   =||
  ||  %@&@%   =|| |_||_| ||=   @%@&@  ||
  ||,,\\V//,  _||________||_ ,,\\V//, ||
- ||_________|___|------|___|_________||</a></pre><span></span></div>
+ ||_________|___|------|___|_________||</a></pre></div>
 
- <div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;<a class="color3" href="https://www.are.na/block/20684314">✿</a><span><i>Archiving is the New Folk Art</i> by Kenneth Goldsmith</span></div>
+ <div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;<a class="color3" href="https://www.are.na/block/20684314" target="_blank">✿</a><span><i>Archiving is the New Folk Art</i> by Kenneth Goldsmith</span></div>
         </div>
     
         <!--Bench / None-->
-        <div class="ascii-building color2">
-            <div class="building-annotations color1"><pre>
+        <div class="ascii-building">
+            <div class="building-annotations color2"><pre>
  _______
 |Resting|
 | Point |
@@ -286,14 +289,14 @@ I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
     |     |                 |
     |     |_________________|
     |    /___________________\
-,’  |  . || '''' ,     `,'' || ,</a></pre><span></span></div>
+,’  |  . || '''' ,     `,'' || ,</a></pre></div>
 
-<div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;<a class="color1" href="https://on-gathering.com/">✿</a><span>Online syllabus for the course "On Gathering" taught by Mindy Seu</span></div>
+<div class="annotations"><a class="color2" href="https://on-gathering.com/" target="_blank">✿</a><span>Online syllabus for the course "On Gathering" taught by Mindy Seu</span></div>
         </div>
 
         <!--Information Booth / Resources-->
         <div class="ascii-building">
-            <div class="building-annotations color2"><pre>
+            <div class="building-annotations color3"><pre>
                  _________________
                 /                 \
                /___________________\
@@ -306,9 +309,9 @@ I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
     ~  \\ //  ~| |      ___      | |
         | |    | |     |___|     | |
         | |    | |_______________| |
-, -=-~ // \\.-^|___________________|</a></pre><span></span></div>
+, -=-~ // \\.-^|___________________|</a></pre></div>
 
-<div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;<a class="color2" href="https://www.are.na/block/14463199">✿</a><span><i>The Carrier Bag Theory of Fiction</i> by Ursula K. Le Guin</span></div>
+<div class="annotations">&nbsp;&nbsp;&nbsp;&nbsp;<a class="color2" href="https://www.are.na/block/14463199" target="_blank">✿</a><span><i>The Carrier Bag Theory of Fiction</i> by Ursula K. Le Guin</span></div>
         </div>
      </div>
     <div class="grass">

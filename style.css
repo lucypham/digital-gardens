@@ -14,18 +14,21 @@ body {
     font-family: 'Courier New', Courier, monospace;
     height:100vh;
 }
-.logo {
-    display: none;
-    font-family: Akkurat;
-    color: #FF5E30;
-    text-align: center;
-    margin-top:20px;
-    position:fixed;
-    width:100vw;
+h1 {
+    font-size: 30px;
+    line-height:35px;
+    margin-bottom:20px;
 }
-/**/
-#navigation {
-    display:block;
+h2, .h2-style {
+    font-size: 20px;
+    line-height:25px;
+    font-weight:lighter;
+    margin-bottom:10px;
+}
+h3 {
+    font-size:20px;
+    padding-top:15px;
+    margin-bottom:10px;
 }
 
 /* Desktop Navigation */
@@ -55,7 +58,18 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
-/* START Text Box*/
+
+/* Mobile Navigation */
+.logo {
+    display: none;
+    font-family: Akkurat;
+    color: #FF5E30;
+}
+#mobile-menu {
+    display:none;
+}
+
+/* Content */
 #text-box {
     border-right:1px solid #000000;
     border-radius: 0px;
@@ -71,7 +85,7 @@ body {
     line-height: 19px;
     box-sizing: border-box;
 }
-#text-box a, #listofgardens a {
+#text-box a, #listofgardens a, #about a {
     color: #FF5E30;
 }
 #text-box a:hover {
@@ -80,6 +94,22 @@ body {
 #text-box > p {
     margin-bottom: 20px;
 }
+
+/* Article */
+.byline {
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000000;
+}
+.quote {
+    font-size:15px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+/* Content > List of Gardens */
 #listofgardens {
     border-right:1px solid #000000;
     border-radius: 0px;
@@ -94,6 +124,10 @@ body {
     line-height: 19px;
     box-sizing: border-box;
 }
+#listofgardens div { /* This is for the heading and description */
+    padding:45px 45px 20px 45px;
+    border-bottom:1px solid #000000;
+}
 #listofgardens a {
     display: flex;
     flex-direction: column;
@@ -106,6 +140,8 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
+
+/* Content > About */
 #about {
     border-right:1px solid #000000;
     border-radius: 0px;
@@ -121,64 +157,21 @@ body {
     line-height: 19px;
     box-sizing: border-box;
 }
-.button {
-    display:none;
-    border-radius: 15px;
-    padding:20px;
-    background-color: #FF5E30;
-    z-index: 300;
-    font-family: Akkurat;
-    color:#ffffff;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 19px;
-    margin: auto;
-    width: 80%;
-    position:relative;
-    top: 50%;
-    transform: translate(0, -50%);
+#about ul {
+    padding-left:15px;
 }
-h1 {
-    font-size: 30px;
-    line-height:35px;
-    margin-bottom:20px;
-}
-h2 {
-    font-size: 20px;
-    line-height:25px;
-    font-weight:lighter;
-    margin-bottom:20px;
-}
-h3 {
-    font-size:20px;
-    padding-top:15px;
-    margin-bottom:10px;
-}
-.byline {
-    font-size:20px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #000000;
-}
-.quote {
-    font-size:15px;
-    font-weight: bold;
-    line-height: 25px;
-}
-/* END Text Box*/
 
-#background {
+/* Digital Garden -
+This needs to exist so that buildings and grass are separate */
+#digital-garden {
     height: 100vh;
     width:auto;
     overflow: scroll;
     display:flex;
     flex-direction: column;
 }
-#container {
-    display: none;
-}
 
+/* Clouds */
 .clouds pre {
     position: fixed;
     animation-name: clouds;
@@ -207,16 +200,8 @@ h3 {
     overflow-y: hidden;
     word-wrap: break-word;
 }
-/* END Grass */
 
-/* All ASCII Buildings*/
-.buildings {
-    height:100vh;
-    display:flex;
-    flex-direction: row;
-    gap:400px;
-    margin-bottom:-100px;
-}
+/* Welcome Sign */
 .sign {
     display:block;
     padding-left: 550px;
@@ -228,6 +213,17 @@ h3 {
     font-size:36px;
     line-height:10px;
 }
+
+/* ASCII Buildings Flex */
+.buildings {
+    height:100vh;
+    display:flex;
+    flex-direction: row;
+    gap:400px;
+    margin-bottom:-100px;
+}
+
+/* Customizing ASCII Buildings */
 .ascii-building {
     align-self: flex-end;
     z-index:200;
@@ -241,75 +237,68 @@ h3 {
 .ascii-building > pre a {
     text-decoration: none;
 }
-.ascii-building > pre a:hover {
-    text-decoration: none;
-    color: #000000;
-}
 
-.building-caption {
-    display:none;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-}
-.building-caption img {
-    display:block;
-    position:absolute;
-    height:200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.ascii-building:hover {
-    display:block;
-}
-
-/* Building 1 */
+/* Building 1 -
+This needs to exist to override the 400px gap (removes space in the "front")*/
 .building1 {
     padding-left:0px;
 }
 
+/* Colors */
 .color1, .color1 a {
     color:#FF5E30 !important;
 }
 
-/* Building 2 */
 .color2, .color2 a {
     color:#BBB809 !important;
 }
 
-/* Building 3 */
 .color3, .color3 a {
     color:#F3B2CA !important;
 }
 
-.color1 a:hover, .color2 a:hover, .color3 a:hover {
+.color1:hover, .color2:hover, .color3:hover {
     color: #000000 !important;
 }
 
+/* Tool Tips! */
 .annotations, .building-annotations {
     position: relative;
     display: flex;
 }
 .annotations {
-    font-size:40px;
+    font-size:50px;
 }
 .annotations a, .building-annotations a {
     color:#FF5E30;
     text-decoration: none;
 }
 
-.annotations > span, .building-annotations > span {
+.building-annotations > span {
     display: none;
-    position: absolute;
+    position:absolute;
     font-family: Akkurat;
     font-size:13px;
-    margin-top:-60px;
+    /*margin-top:-60px;*/
+    left: 50%;
+    margin-left: -60px;
     max-width:200px;
     text-align: center;
     border:1px solid #000000;
     padding:5px;
     background-color: #ffffffe7;
-    left: 50%;
+}
+
+.annotations > span {
+    display: none;
+    position:absolute;
+    font-family: Akkurat;
+    font-size:13px;
+    max-width:200px;
+    text-align: center;
+    border:1px solid #000000;
+    padding:5px;
+    background-color: #ffffffe7;
 }
 
 .annotations a:hover {
@@ -324,72 +313,110 @@ h3 {
 
 /* MOBILE VERSION */
 @media only screen and (max-width: 435px) {
-    .logo {
-        display:block;
-    }
-    #text-box {
-        display: none;
-    }
-    #listofgardens {
-        display:none;
-    }
+    /* Mobile Navigation */
     .nav {
         display:none;
     }
-    #container {
-        font-family: Akkurat;
-        font-size:17px;
-        text-align: center;
+    .logo {
         display:block;
-        z-index: 300;
-        margin:auto;
-        position:relative;
-        margin-bottom:-100px;
-        top: 25%;
-        transform: translate(0, -50%);
-        padding:20px;
-        height:auto;
     }
-    #container a {
-        font-family: Akkurat;
-        font-size: 18px;
+    #mobile-menu {
+        display:block;
+        z-index:500;
+        overflow: hidden;
+        position: fixed;
+        width:100vw;
+        background-color: #ffffff;
+    }
+    #mobile-menu #mobile-menu-links {
+        display: none;
+        top:50.5px;
+        position:fixed;
+        background-color: #ffffff;
+        width:100%;
+    }
+    #mobile-menu a.menu-icon {
+        display:block;
+        position:absolute;
+        top: 0;
+        right: 0;
+        border-bottom: none;
+        border-left: 1px solid #000000;
+    }
+    #mobile-menu a {
+        padding:14px 16px;
         text-decoration: none;
-        color:#FF5E30
-    }
-    #mobile-textbox {
+        font-size: 17px;
         display:block;
-        border:1px solid #000000;
-        border-radius:15px;
-        width:70vw;
-        padding:20px;
-        background-color: white;
-        height:50vh;
+        font-family: Akkurat;
+        color: #000000;
+        border-bottom: 1px solid #000000;
+    }
+    .material-symbols-outlined {
+        display: block;
+        flex-grow: 1;
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+
+    /* Content */
+    #text-box {
+        display: none;
+        width:100vw;
+        border:none;
+        height:100vh;
+        padding:90px 16px 50px 16px;
+        position:fixed;
+        overflow: auto;
         z-index: 300;
         font-family: Akkurat;
         font-size: 14px;
         line-height: 19px;
-        overflow:auto;
-        margin:auto;
-        position:relative;
-        top: 50%;
-        transform: translate(0, -50%);
+        box-sizing: border-box;
     }
-    #mobile-textbox > p {
-        margin-bottom: 20px;
+
+    /* Content > Article */
+    #article {
+        display: none;
+        border:none;
+        background-color: white;
     }
-    .button {
-        display: block;
+
+    /* Content > List of Gardens */
+    #listofgardens {
+        display: none;
     }
-    #background {
+
+    /* Content > About */
+    #about {
+        display: none;
+        border:none;
+        padding:90px 16px 50px 16px;
+        background-color: white;
+        width:100vw;
+        height:100vh;
+        position:fixed;
+        overflow: auto;
+        z-index: 300;
+        font-family: Akkurat;
+        font-size: 14px;
+        line-height: 19px;
+        box-sizing: border-box;
+    }
+
+    /* Digital Garden */
+    #digital-garden {
         height: 100vh;
         width:auto;
         overflow: scroll;
         display:flex;
         flex-direction: column;
     }
-    .building1 {
-        padding-left:100px;
-    }
+
+    /* Digital Gardens > Grass */
     .grass {
         border-top:0px solid #000000;
         bottom:0;
@@ -412,6 +439,11 @@ h3 {
         word-wrap: break-word;
         background-color:#efefd2
     }
+
+    /* Digital Gardens > Buildings */
+    .building1 {
+        padding-left:100px;
+    }
     .buildings {
         display:flex;
         flex-direction: row;
@@ -421,55 +453,19 @@ h3 {
     .ascii-building {
         font-size:15px;
     }
+
+    /* Digital Gardens > Tool Tips */
     .annotations span {
         display:block;
+        margin-top:-30px;
     }
-
-    #navigation {
-        position: sticky;
-        overflow: hidden;
-        width:100vw;
-        height:auto;
-        background-color: #B4B9C8;
-        padding:30px 60px 20px 20px;
-        z-index:100;
-        text-align: left;
-    }
-
-    .h1 {
-        float:left;
-        margin-bottom:0px;
-    }
-
-    .exit {
-        position:absolute;
-        right:0;
-        top:25%;
-        margin-right:30px;
+    .building-annotations span {
         display:block;
     }
 
-    .content {
-        display:none;
-    }
-
-    #dropdown-content {
-        display:none;
-    }
-
-    #dropdown-content.showing {
-        display: block;
-    }
-    .clouds pre {
-        display:none;
-    }
+    /*Welcome Sign*/
     .sign {
-        display:none;
-        padding-left: 10px;
-    }
-    .mobile-sign {
-        display: block;
-        padding-left: 10px;
+        padding-left: 0px;
     }
     .arrow {
         font-size:30px;
