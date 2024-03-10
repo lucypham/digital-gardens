@@ -404,6 +404,7 @@ This needs to exist to override the 400px gap (removes space in the "front")*/
         width:100vw;
         height:100vh;
         overflow: auto;
+        padding-bottom: 100px;
     }
 
     /* Content > List of Gardens */
@@ -413,6 +414,7 @@ This needs to exist to override the 400px gap (removes space in the "front")*/
         width:100vw;
         height:100vh;
         overflow: auto;
+        padding-bottom: 100px;
     }
     #mygarden div, #listofgardens div { /* This is for the heading and description */
         padding:90px 16px 20px 16px;
@@ -433,7 +435,7 @@ This needs to exist to override the 400px gap (removes space in the "front")*/
     #about {
         display: none;
         border:none;
-        padding:90px 16px 50px 16px;
+        padding:90px 16px 100px 16px;
         background-color: white;
         width:100vw;
         height:100vh;
